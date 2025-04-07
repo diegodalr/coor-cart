@@ -17,8 +17,11 @@ This app template does little more than install the CLI and scaffold a repositor
 ### Requirements
 
 1. You must [download and install Node.js](https://nodejs.org/en/download/) if you don't already have it.
-1. You must [create a Shopify partner account](https://partners.shopify.com/signup) if you don’t have one.
-1. You must create a store for testing if you don't have one, either a [development store](https://help.shopify.com/en/partners/dashboard/development-stores#create-a-development-store) or a [Shopify Plus sandbox store](https://help.shopify.com/en/partners/dashboard/managing-stores/plus-sandbox-store).
+2. You must [create a Shopify partner account](https://partners.shopify.com/signup) if you don’t have one.
+3. You must create a store for testing if you don't have one, either a [development store](https://help.shopify.com/en/partners/dashboard/development-stores#create-a-development-store) or a [Shopify Plus sandbox store](https://help.shopify.com/en/partners/dashboard/managing-stores/plus-sandbox-store).
+4. You must enable the [Headless app](https://apps.shopify.com/headless) to use a Storefront API public key
+5. You can enable the [Shopify GraphiQL app](https://shopify-graphiql-app.shopifycloud.com/login) to use an useful GraphQL explorer, **product_listings:read** scopes is required for Storefront API
+6. This application requires to have enabled the next **scope: read_products**
 
 ### Installing the template
 
@@ -70,9 +73,18 @@ pnpm run dev
 
 Open the URL generated in your console. Once you grant permission to the app, you can start development (such as generating extensions).
 
+## Instructions
+
+This Shopify stack uses the next stack:
+- Liquid: to add the base markup
+- Tailwind CSS framework, basic intallation for now
+- React: to build the Cart component
+- GraphQL: to query the existing products from Shopify
+
 ## Developer resources
 
 - [Introduction to Shopify apps](https://shopify.dev/docs/apps/getting-started)
 - [App extensions](https://shopify.dev/docs/apps/build/app-extensions)
 - [Extension only apps](https://shopify.dev/docs/apps/build/app-extensions/build-extension-only-app)
 - [Shopify CLI](https://shopify.dev/docs/apps/tools/cli)
+
