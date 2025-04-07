@@ -15,7 +15,7 @@ The repository is organized as follows:
 ```
 
 - **`/apps`**: Contains standalone applications.
-- **`/apps/woocoor`**: A Wordpress plugin.
+- **`/apps/woocoor/woocoor-cart`**: A Wordpress plugin.
 - **`/apps/shocoor`**: A Shopify theme app extension.
 
 ## Getting Started
