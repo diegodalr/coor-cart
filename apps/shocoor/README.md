@@ -81,6 +81,12 @@ This Shopify stack uses the next stack:
 - React: to build the Cart component
 - GraphQL: to query the existing products from Shopify
 
+## Demo
+
+Demo page was added:
+[https://shocoor.myshopify.com/blogs/news/demo-shopping-cart](https://shocoor.myshopify.com/blogs/news/demo-shopping-cart)
+![ShooCoor cart](./shocoor-cart.png)
+
 ## Developer resources
 
 - [Introduction to Shopify apps](https://shopify.dev/docs/apps/getting-started)
