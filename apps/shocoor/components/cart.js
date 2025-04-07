@@ -69,7 +69,7 @@ const Cart = () => {
 					{cartItems.map((item) => (
 						<div key={item.id} className="rounded-3xl border-2 border-gray-200 p-4 lg:p-8 grid grid-cols-12 mb-8 max-lg:max-w-lg max-lg:mx-auto gap-y-4 ">
 							<div className="col-span-12 lg:col-span-2 img box">
-								<img src={item.image} alt={item.name} width={100} height={100} alt="speaker image" className="max-lg:w-full lg:w-[180px] rounded-lg object-cover" />
+								<img src={item.image} alt={item.name} width={100} height={100} className="max-lg:w-full lg:w-[180px] rounded-lg object-cover" />
 							</div>
 							<div className="col-span-12 lg:col-span-10 detail w-full lg:pl-3">
 								<div className="flex items-center justify-between w-full mb-4">
