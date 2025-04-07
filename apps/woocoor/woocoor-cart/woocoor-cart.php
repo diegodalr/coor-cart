@@ -57,3 +57,28 @@ function woocoor_woocoor_cart_block_init() {
 	}
 }
 add_action( 'init', 'woocoor_woocoor_cart_block_init' );
+
+// REST API initialization.
+add_action('rest_api_init', function() {
+    register_rest_route('woocoor/v1', '/cart-items', [
+        'methods' => 'GET',
+        'callback' => 'woocoor_get_cart_items',
+        'permission_callback' => '__return_true',
+    ]);
+});
+
+// Callback function to load cart items.
+function woocoor_get_cart_items(WP_REST_Request $request) {
+	$json_file_path = plugin_dir_path(__FILE__) . 'samples/cart-items.json';
+    if (file_exists($json_file_path) && is_readable($json_file_path)) {
+        $json_data = file_get_contents($json_file_path);
+        $cart_data = json_decode($json_data, true);
+        if ($cart_data !== null) {
+            return rest_ensure_response($cart_data);
+        } else {
+            return new WP_Error('invalid_json', 'Error decoding JSON data', ['status' => 500]);
+        }
+    } else {
+        return new WP_Error('file_not_found', 'Sample data file not found', ['status' => 404]);
+    }
+}
